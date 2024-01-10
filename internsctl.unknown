@@ -1,0 +1,92 @@
+.TH INTERNSCTL 1 "January 2024" "v0.1.0" "internsctl Manual"
+
+.SH NAME
+internsctl \- Custom Linux command for operations
+
+.SH SYNOPSIS
+.B internsctl [OPTION]... [COMMAND] [USERNAME] [FILE]
+
+.SH DESCRIPTION
+Custom Linux command for performing various operations.
+
+.SH OPTIONS
+.TP
+.B --help
+Show this help message and exit.
+
+.TP
+.B --version
+Show command version.
+
+.SH COMMANDS
+.TP
+.B cpu getinfo
+Get CPU information.
+
+.TP
+.B memory getinfo
+Get memory information.
+
+.TP
+.B user create <username>
+Create a new user.
+
+.TP
+.B user list
+List all users.
+
+.TP
+.B user list --sudo-only
+List users with sudo permissions.
+
+.TP
+.B file getinfo <file>
+Get information about a file.
+
+.SH EXAMPLES
+.TP
+.B internsctl cpu getinfo
+Get CPU information.
+
+.TP
+.B internsctl memory getinfo
+Get memory information.
+
+.TP
+.B internsctl user create john_doe
+Create a new user with username 'john_doe'.
+
+.TP
+.B internsctl user list
+List all users.
+
+.TP
+.B internsctl user list --sudo-only
+List users with sudo permissions.
+
+.TP
+.B internsctl file getinfo --size hello.txt
+Get the size of the specified file 'hello.txt'.
+
+.TP
+.B internsctl file getinfo --permissions hello.txt
+Get the permissions of the specified file 'hello.txt'.
+
+.TP
+.B internsctl file getinfo --owner hello.txt
+Get the owner of the specified file 'hello.txt'.
+
+.TP
+.B internsctl file getinfo --last-modified hello.txt
+Get the last modified time of the specified file 'hello.txt'.
+
+.SH SEE ALSO
+.BR lscpu (1),
+.BR free (1),
+.BR adduser (8),
+.BR cut (1),
+.BR stat (1),
+.BR date (1).
+
+
+
